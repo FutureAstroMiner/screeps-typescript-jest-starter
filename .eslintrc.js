@@ -1,14 +1,9 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: './tsconfig.json'
-  },
-  plugins: [
-    '@typescript-eslint'
-  ],
+  parserOptions: { project: './tsconfig.eslint.json' },
+  plugins: ['@typescript-eslint'],
   extends: [
-    'airbnb-typescript/base',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking'
@@ -32,6 +27,14 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': 'off'
   },
   overrides: [
+    {
+      'files': ['**/*.js'],
+      'rules': {
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off'
+      }
+    },
     {
       'files': ['**/*.spec.ts'],
       'rules': {
