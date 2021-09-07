@@ -9,7 +9,7 @@ const dest = process.env.DEST;
 if (!dest) {
   console.log('No destination specified - code will be compiled but not uploaded');
 } else {
-  // eslint-disable-next-line global-require
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   cfg = require('./screeps.json')[dest];
   if (!cfg) {
     throw new Error('Invalid upload destination');

@@ -9,7 +9,7 @@ interface UpgraderMemory extends CreepMemory {
 
 const roleUpgrader = {
 
-  run(creep: Upgrader) {
+  run(creep: Upgrader): void {
     if (creep.memory.upgrading && creep.store[RESOURCE_ENERGY] === 0) {
       creep.memory.upgrading = false;
       creep.say('🔄 harvest');

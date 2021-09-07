@@ -10,7 +10,7 @@ declare global {
   }
 }
 
-function unwrappedLoop() {
+function unwrappedLoop(): void {
   console.log(`Current game tick is ${Game.time}`);
 
   Object.values(Game.rooms).forEach(room => {

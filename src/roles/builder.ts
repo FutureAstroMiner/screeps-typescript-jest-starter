@@ -8,7 +8,7 @@ interface BuilderMemory extends CreepMemory {
 }
 
 const roleBuilder = {
-  run(creep: Builder) {
+  run(creep: Builder): void {
     if (creep.memory.building && creep.store[RESOURCE_ENERGY] === 0) {
       creep.memory.building = false;
       creep.say('🔄 harvest');
