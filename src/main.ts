@@ -8,6 +8,13 @@ declare global {
   interface CreepMemory {
     role: string;
   }
+  interface Memory {
+    hivemind: KernelMemory,
+  }
+
+  interface KernelMemory {
+    someValue?: number;
+  }
 }
 
 function unwrappedLoop(): void {
